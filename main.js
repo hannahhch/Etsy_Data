@@ -12,11 +12,10 @@ function question1() {
   let average = 0;
   for (i = 0; i < data.length; i ++){
     sum += data[i].price;
-    average = sum/data.length
   }
+  average = sum/data.length;
   console.log( "The average price is $" + average.toFixed(2));
 };
-
 
 // 2: Show me how to get an array of items that cost between $14.00 and $18.00 USD
 function question2 () {
@@ -32,15 +31,11 @@ function question2 () {
 
 // 3: Which item has a "GBP" currency code? Display it's name and price.
 function question3 () {
-  let currencyPounds = "";
   for (i = 0; i < data.length; i++) {
     if (data[i].currency_code === "GBP") {
-      currencyPounds = (data[i].title + " costs " + data[i].price + " pounds.");
-
+      console.log(data[i].title + " costs " + data[i].price + " pounds.");
     }
   }
-  console.log(currencyPounds);
-  // Answer:
 }
 
 
@@ -53,26 +48,31 @@ function question4 () {
     }
   }
   console.log(materialWood.join('\n'));
-  // Answer: fix this so it targeted entire array
+
 }
 
 
 // 5: Which items are made of eight or more materials?
 //    Display the name, number of items and the items it is made of.
 function question5 () {
-  let manyMaterials = "";
   for (i = 0; i < data.length; i++){
     if (data[i].materials.length >= 8){
-      manyMaterials = (data[i].title + data[i].materials + data[i].materials.length);
+      console.log(data[i].title + data[i].materials + data[i].materials.length);
     }
   }
-  console.log(manyMaterials);
-  // Answer: why is this only giving me one answer and how do I make it a list?
 }
 
 
 // 6: How many items were made by their sellers?
 // Answer:
 function question6 () {
-  // Answer:
+  let peopleArr = [];
+  for (i = 0; i < data.length; i ++){
+    if (data[i].who_made === 'i_did') {
+
+      peopleArr.push(data[i].who_made);
+    }
+  }
+  console.log(peopleArr.length + ' items were made by their sellers.');
+
 }
