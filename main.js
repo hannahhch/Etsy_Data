@@ -57,11 +57,13 @@ function question4 () {
 function question5 () {
   for (i = 0; i < data.length; i++){
     if (data[i].materials.length >= 8){
-      console.log(data[i].title + data[i].materials + data[i].materials.length);
+      console.log(data[i].title + ' has ' + data[i].materials.length + " materials:");
+      for (j = 0; j < data[i].materials.length; j++){
+        console.log("- " + data[i].materials[j]);
+      }
     }
   }
 }
-
 
 // 6: How many items were made by their sellers?
 // Answer:
