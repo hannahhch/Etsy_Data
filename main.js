@@ -26,26 +26,48 @@ function question2 () {
       priceArr.push(data[i].title);
     }
   }
-   console.log(priceArr);
+   console.log(priceArr.join('\n'));
 };
 
 
 // 3: Which item has a "GBP" currency code? Display it's name and price.
 function question3 () {
+  let currencyPounds = "";
+  for (i = 0; i < data.length; i++) {
+    if (data[i].currency_code === "GBP") {
+      currencyPounds = (data[i].title + " costs " + data[i].price + " pounds.");
+
+    }
+  }
+  console.log(currencyPounds);
   // Answer:
 }
 
 
 // 4: Display a list of all items who are made of wood.
 function question4 () {
-  // Answer:
+  let materialWood = [];
+  for (i = 0; i < data.length; i ++) {
+    if (data[i].materials.includes("wood")) {
+      materialWood.push(data[i].title + " is made of wood.");
+    }
+  }
+  console.log(materialWood.join('\n'));
+  // Answer: fix this so it targeted entire array
 }
 
 
 // 5: Which items are made of eight or more materials?
 //    Display the name, number of items and the items it is made of.
 function question5 () {
-  // Answer:
+  let manyMaterials = "";
+  for (i = 0; i < data.length; i++){
+    if (data[i].materials.length >= 8){
+      manyMaterials = (data[i].title + data[i].materials + data[i].materials.length);
+    }
+  }
+  console.log(manyMaterials);
+  // Answer: why is this only giving me one answer and how do I make it a list?
 }
 
 
