@@ -14,17 +14,20 @@ function question1() {
     sum += data[i].price;
     average = sum/data.length
   }
-  return "The average price is $" + average.toFixed(2);
-  // Answer:
+  console.log( "The average price is $" + average.toFixed(2));
 };
-console.log(question1());
 
 
 // 2: Show me how to get an array of items that cost between $14.00 and $18.00 USD
 function question2 () {
-  // Answer:
-}
-
+  let priceArr = [];
+  for (i = 0; i < data.length; i ++){
+    if (data[i].price >= 14 && data[i].price <= 18){
+      priceArr.push(data[i].title);
+    }
+  }
+   console.log(priceArr);
+};
 
 
 // 3: Which item has a "GBP" currency code? Display it's name and price.
