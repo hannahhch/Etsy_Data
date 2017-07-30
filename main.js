@@ -14,18 +14,20 @@ function question1() {
     sum += data[i].price;
   }
   average = sum/data.length;
-  console.log( "The average price is $" + average.toFixed(2));
+    return "The average price is $" + average.toFixed(2);
 };
 
 // 2: Show me how to get an array of items that cost between $14.00 and $18.00 USD
 function question2 () {
   let priceArr = [];
+  priceArr.push('<ul>');
   for (let i = 0; i < data.length; i ++){
     if (data[i].price >= 14 && data[i].price <= 18){
-      priceArr.push(data[i].title);
+      priceArr.push('<li>' + data[i].title + '</li>');
     }
+    priceArr.push('</ul>');
   }
-   console.log(priceArr.join('\n'));
+   return priceArr.join('\n');
 };
 
 
@@ -33,7 +35,7 @@ function question2 () {
 function question3 () {
   for (let i = 0; i < data.length; i++) {
     if (data[i].currency_code === "GBP") {
-      console.log(data[i].title + " costs " + data[i].price + " pounds.");
+      return data[i].title + " costs " + data[i].price + " pounds.";
     }
   }
 }
@@ -47,7 +49,7 @@ function question4 () {
       materialWood.push(data[i].title + " is made of wood.");
     }
   }
-  console.log(materialWood.join('\n'));
+  return materialWood.join('\n');
 
 }
 
@@ -55,14 +57,18 @@ function question4 () {
 // 5: Which items are made of eight or more materials?
 //    Display the name, number of items and the items it is made of.
 function question5 () {
+  let mainData = [];
   for (let i = 0; i < data.length; i++){
     if (data[i].materials.length >= 8){
-      console.log(data[i].title + ' has ' + data[i].materials.length + " materials:");
+      mainData.push(data[i].title + ' has ' + data[i].materials.length + " materials:");
+      mainData.push("<ul>");
       for (j = 0; j < data[i].materials.length; j++){
-        console.log("- " + data[i].materials[j]);
+        mainData.push( '<li>' + data[i].materials[j] + '</li>');
       }
+      mainData.push("</ul>");
     }
   }
+  return mainData.join('\n');
 }
 
 // 6: How many items were made by their sellers?
@@ -75,6 +81,18 @@ function question6 () {
       peopleArr.push(data[i].who_made);
     }
   }
-  console.log(peopleArr.length + ' items were made by their sellers.');
+  return peopleArr.length + ' items were made by their sellers.';
 
 }
+
+document.getElementById('answer_one').textContent = question1();
+
+document.getElementById('answer_two').innerHTML = question2();
+
+document.getElementById('answer_three').textContent = question3();
+
+document.getElementById('answer_four').textContent = question4();
+
+document.getElementById('answer_five').innerHTML = question5();
+
+document.getElementById('answer_six').textContent = question6();

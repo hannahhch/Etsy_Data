@@ -1,3 +1,4 @@
+/*general styling*/
 body {
   margin: 0;
   background-color: #FAF9F5;
@@ -9,6 +10,7 @@ body {
   margin: 5% 10%;
 }
 
+/*navigation bar*/
 
 #logo {
   color: #F56400;
@@ -35,6 +37,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;
   color: #606060;
+  padding-bottom: 5px;
 }
 
 .nav button:hover {
@@ -43,4 +46,33 @@ body {
   border-right: none;
   border-top: none;
 
+}
+
+/*table*/
+.results {
+  font-family: 'Source Sans Pro', sans-serif;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: black 1px solid;
+  width: 50%;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  height: 500px;
+}
+
+th {
+  font-size: 25px;
+  color: #F56400;
+  font-family: serif;
+  font-weight: lighter;
+
+}
+
+#answer_five {
+  text-align: left;
 }
