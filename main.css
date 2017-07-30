@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  background-color: #FAF9F5;
+}
+
+.wrapper {
+  width: 80%;
+  border: 1px solid black;
+  margin: 5% 10%;
+}
+
+
+#logo {
+  color: #F56400;
+  font-size: 35px;
+  font-weight: lighter;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 80px;
+  align-items: center;
+  background-color: white;
+}
+
+.nav button {
+  border-bottom: solid 3px transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  width: 80px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  color: #606060;
+}
+
+.nav button:hover {
+  border-bottom: solid 3px #F56400;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+
+}
