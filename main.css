@@ -6,7 +6,6 @@ body {
 
 .wrapper {
   width: 80%;
-  border: 1px solid black;
   margin: 5% 10%;
 }
 
@@ -27,26 +26,6 @@ body {
   background-color: white;
 }
 
-.nav button {
-  border-bottom: solid 3px transparent;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  background-color: transparent;
-  width: 80px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
-  color: #606060;
-  padding-bottom: 5px;
-}
-
-.nav button:hover {
-  border-bottom: solid 3px #F56400;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-
-}
 
 /*table*/
 .results {
@@ -55,9 +34,10 @@ body {
 }
 
 td, th {
-  border: black 1px solid;
-  width: 50%;
+  border: #A9A9A9	 1px solid;
   text-align: center;
+  padding: 5px;
+  color: #696969;
 }
 
 table {
@@ -70,9 +50,29 @@ th {
   color: #F56400;
   font-family: serif;
   font-weight: lighter;
+  background-color: white;
 
 }
 
-#answer_five {
+#answer_two, #answer_four, #answer_five {
   text-align: left;
+}
+
+.left {
+  width: 25%;
+  font-weight: bold;
+}
+
+.dark {
+  background-color: #E8E8E8	;
+}
+
+.light {
+  background-color: #F8F8F8;
+}
+
+footer {
+  color: #F56400;
+  font-size: 18px;
+
 }

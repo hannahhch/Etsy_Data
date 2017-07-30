@@ -25,8 +25,9 @@ function question2 () {
     if (data[i].price >= 14 && data[i].price <= 18){
       priceArr.push('<li>' + data[i].title + '</li>');
     }
-    priceArr.push('</ul>');
   }
+  priceArr.push('</ul>');
+
    return priceArr.join('\n');
 };
 
@@ -44,11 +45,13 @@ function question3 () {
 // 4: Display a list of all items who are made of wood.
 function question4 () {
   let materialWood = [];
+  materialWood.push('<ul>');
   for (let i = 0; i < data.length; i ++) {
     if (data[i].materials.includes("wood")) {
-      materialWood.push(data[i].title + " is made of wood.");
+      materialWood.push('<li>' + data[i].title + " is made of wood." + '</li>');
     }
   }
+  materialWood.push('</ul>');
   return materialWood.join('\n');
 
 }
@@ -91,7 +94,7 @@ document.getElementById('answer_two').innerHTML = question2();
 
 document.getElementById('answer_three').textContent = question3();
 
-document.getElementById('answer_four').textContent = question4();
+document.getElementById('answer_four').innerHTML = question4();
 
 document.getElementById('answer_five').innerHTML = question5();
 
